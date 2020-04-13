@@ -1,9 +1,9 @@
 :root {
   --main-bg-color: #f5f5f5;
-  --primary-color: #48A282;
+  --primary-color: #409074;
   --secondary-color: #0D1512;
   --text-color: #4D4D4D;
-  --primary-color-hover: #378066;
+  --primary-color-hover: #306f59;
 }
 
 * {
@@ -48,7 +48,9 @@ header {
   color: var(--primary-color);
 }
 
-nav ul{
+nav ul,
+footer ul,
+.technologies ul{
   list-style: none;
   display: flex;
 }
@@ -59,10 +61,7 @@ li {
 }
 
 nav a:hover {
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-decoration-color: var(--primary-color);
-  text-decoration-thickness: 100px;
+  color: var(--primary-color);
 }
 
 /* MAIN HEADER */
@@ -90,14 +89,15 @@ h1 span {
 }
 
 .main-header {
-  margin: 3vw 0;
+  margin: 3vw 0 0 0;
+  height: 70vh;
 }
 
 .main-header button {
   width: 150px;
   background: var(--primary-color);
   padding: .5rem 1rem;
-  margin-top: 1rem;
+  margin-top: 2rem;
   font-size: 1.1rem;
   color: white;
   border-radius: 5px;
@@ -121,7 +121,10 @@ h1 span {
 .main-header a svg:hover,
 .main-header a:hover,
 .links a:hover,
-.logo p:hover {
+.logo p:hover,
+.about-me-content a:hover,
+.contact a:hover {
+  cursor: pointer;
   color: var(--primary-color-hover);
   fill: var(--primary-color-hover);
   stroke: var(--primary-color-hover);
@@ -134,33 +137,79 @@ h1 span {
   stroke: var(--primary-color);
 }
 
+.call-to-action a {
+  margin-right: 2rem;
+  margin-left: 0;
+}
+
 /* ABOUT ME */
 
-.about-me,
-.projects {
-  padding: 7rem 0 0 0;
-  margin: 7rem 0 0 0;
+section {
+  height: 70vh;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: left;
 }
 
 .about-me p {
-  padding-right: 3rem;
+  padding-right: 7rem;
+  max-width: 770px;
 }
 
 h2 {
-  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-transform: capitalize;
+}
+
+.about-me-content {
+  display: flex;
+}
+
+.about-me-content a,
+.contact a {
+  color: var(--primary-color);
+  font-weight: 500;
+}
+
+.technologies ul {
+  flex-direction: column;
+  margin-top: 1rem;
+  margin-right: 1.5rem;
+}
+
+.technologies ul li:before {
+  content: "▹";
+  position: relative;
+  left: 0px;
+  color: var(--primary-color);
+  font-size: 17px;
+  line-height: 12px;
+  padding-right: 1rem;
+}
+
+.technologies ul li {
+  margin: .5rem .5rem 0 0;
+  font-size: 14px;
+}
+
+.techno-list {
+  display: flex;
+}
+
+h2 {
+  font-size: 3.5rem;
   font-weight: 400;
   line-height: 100%;
-  padding-right: 5rem;
 }
+
+/* PROJECTS */
 
 .project-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 2rem;
 }
 
 h3 {
@@ -188,4 +237,86 @@ h3 {
 
 .project {
   padding-right: 5rem;
+}
+
+/* CONTACT */
+
+.contact {
+  flex-direction: column;
+  text-align: center;
+  height: 50vh;
+}
+
+.contact p {
+ max-width: 530px;
+ margin: 0 auto;
+}
+
+/* FOOTER */
+
+footer {
+  background: white;
+}
+
+footer ul {
+  justify-content: center;
+}
+
+footer li {
+  margin: 1rem;
+  font-weight: 500;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 860px) {
+  
+  .main-header {
+    height: 100vh;
+  }
+
+  .about-me-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .technologies {
+    margin-top: 1rem;
+  }
+
+  .project-content {
+    flex-direction: column;
+  }
+
+  .project {
+    margin-bottom: 5rem;
+  }
+
+  section {
+    height: 100vh;
+  }
+
+  .contact {
+    text-align: left;
+  }
+
+  .contact h2 {
+    margin-bottom: 4rem;
+  }
+
+  .contact p {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  
+  .main-header {
+    margin-bottom: 25vh;
+  }
+
+  .contact {
+    height: 30vh;
+    margin-bottom: 2rem;
+  }
 }

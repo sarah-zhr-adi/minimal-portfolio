@@ -18,23 +18,23 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">About Me</a></li>
-        <li><a href="#">Projects</a></li>
+        <li><a href="#about-me">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
         <li><a href="#">Resume</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <div class="content">
-    <section class="main-header">
+    <main class="main-header">
       <h1>Hi there! </h1>
       <h1>I am <span>Sarah</span>, an enthusiastic and experienced 
-      <span>Software Engineer</span> based in Ottawa, Canada.</h1> 
+      <span>Software&nbsp;Engineer</span> based in Ottawa, Canada.</h1> 
       <h1>  I specialize in designing and building exceptional, 
-        high-quality websites and applications.</h1>
+        high&#8209;quality websites and applications.</h1>
       <div class="call-to-action">
-        <button>Get in Touch</button>
+        <a href="#contact"><button>Get in Touch</button></a>
         <a href="#projects">View Projects 
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="9" viewBox="0 0 25 9">
             <g id="arrow-right" transform="translate(-604.5 -596)">
@@ -45,17 +45,45 @@
         </a> 
       </div>
         
-    </section>
+    </main>
   
-    <section class="about-me">
+    <section class="about-me" id="about-me">
       <h2>About Me</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eveniet explicabo assumenda amet minima numquam perspiciatis, illo repellendus voluptatem, veritatis doloribus quod ab unde ipsum sequi eius rerum deserunt officia.</p>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia eveniet explicabo assumenda amet minima numquam perspiciatis, illo repellendus voluptatem, veritatis doloribus quod ab unde ipsum sequi eius rerum deserunt officia.</p>
+      <div class="about-me-content">
+        <p>Hello! I'm Sarah, a software engineer based in Ottawa, CA who is passionate about building what could improve the lives of those around me. <br>
+          <br>
+            I specialize in designing and creating websites and web apps that provide intuitive, pixel-perfect user interfaces with efficient backends for clients ranging from individuals and small&#8209;businesses all the way to large enterprise corporations.
+            <br>
+            <br>
+            Currently at <a href="https://mediaplusadvertising.com/">Mediaplus Advertising</a> where I work on a wide variety of interesting and meaningful projects on a daily basis.
+            </p>
+            <div class="technologies">
+              <p>
+                Here are a few technologies I've been working with recently: 
+                <div class="techno-list">
+                  <ul>
+                    <li>HTML & (S)CSS</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>PHP</li>
+                    <li>Wordpress</li>
+                  </ul>
+                  <ul>
+                    <li>React</li>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>PostgreSQL</li>
+                  </ul>
+                </div>
+                
+             </p>
+            </div>
+          
+      </div>
+      
     </section>
 
-    <section class="projects">
-
-      <h2>Some things I've built</h2>
+    <section class="projects" id="projects">
+      <h2>Projects</h2>
       <div class="project-content">
         <div class="project">
           <h3>Lorem ipsum dolor</h3>
@@ -75,17 +103,21 @@
               <a href="">— Source Code</a>
           </div> 
         </div>
-       </div>
       </div>
       
+      
     </section>
+    
+    <section class="contact" id="contact"> 
+      <h2>Contact</h2>
+      <p>Say hello by <a href="mailto:sarah.zhr.adi@gmail.com" target="_blank">dropping me an email</a>. You can also find me on <a href="https://github.com/sarah-zhr-adi/" target="_blank">GitHub</a>, <a href="https://dribbble.com/Sarah3di" target="_blank">Dribbble</a>, <a href="https://codepen.io/Sarah3dii" target="_blank">Codepen</a> and <a href="https://www.linkedin.com/in/sarah-adi-511587b0/" target="_blank">Linkedin</a>.</p>
+    </section>
+    
   </div>
-  
- 
   
   <footer>
     <ul>
-      <li><a href="#">Footer link</a></li>
+      <li>@ 2020 by Sarah Adi</li>
     </ul>
   </footer>
 
